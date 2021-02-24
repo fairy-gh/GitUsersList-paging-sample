@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:CircleImageView="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="user"
+            type="com.fairy_gh.gituserslist_paging.Model.User" />
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="130dp"
+        android:layout_height="150dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:padding="4dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/avatar"
+            android:layout_width="98dp"
+            android:layout_height="98dp"
+            android:src="@drawable/ic_launcher_background"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FF000000"
+            android:scaleType="centerCrop"
+            android:layout_centerHorizontal="true"
+            CircleImageView:image="@{user.avatar_url}"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/avatar"
+            android:layout_marginTop="15dp"
+            android:text="@{user.login, default=fairy_gh}"
+            android:textColor="#FF000000"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:maxLines="1"
+            android:fontFamily="sans-serif-light"/>
+
+    </RelativeLayout>
+
+</layout>
