@@ -9,23 +9,21 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
 
-    private String base_url = "https://api.github.com/";
+    private static String base_url = "https://api.github.com/";
     private static Retrofit instance = null;
 
-    public Retrofit getInstance(String url){
+    public static Retrofit getInstance(){
 
         if(instance == null){
             instance = new Retrofit.Builder()
-                    .baseUrl(url)
+                    .baseUrl(base_url)
                     .addConverterFactory(GsonConverterFactory.create())
-                    .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
                     .build();
         }
-
         return instance;
     }
 
-    public ApiInterface getApiInterface(){
+    /*public static ApiInterface getApiInterface(){
         return instance.create(ApiInterface.class);
-    }
+    }*/
 }
