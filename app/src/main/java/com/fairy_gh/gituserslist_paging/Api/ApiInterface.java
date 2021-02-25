@@ -11,7 +11,6 @@ import retrofit2.http.Query;
 public interface ApiInterface {
     @GET("users")
     Call<List<User>> getUsers(
-            //@Query("accept") String accept,
             @Query("since") int userId,
             @Query("per_page") int per_page
     );
