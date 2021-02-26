@@ -18,9 +18,10 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.fairy_gh.gituserslist_paging.Adapter.UserAdapter;
-import com.fairy_gh.gituserslist_paging.Model.User;
+import com.fairy_gh.gituserslist_paging.model.User;
 import com.fairy_gh.gituserslist_paging.R;
 import com.fairy_gh.gituserslist_paging.UserViewModel;
 import com.fairy_gh.gituserslist_paging.databinding.FragmentHomeBinding;
@@ -35,7 +36,7 @@ public class HomeFragment extends Fragment {
 
     FragmentHomeBinding binding;
     UserViewModel viewModel;
-    UserAdapter adapter = new UserAdapter(getActivity());;
+    UserAdapter adapter = new UserAdapter(getActivity());
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -47,6 +48,8 @@ public class HomeFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        Toast.makeText(getActivity(), "Hello", Toast.LENGTH_LONG).show();
 
         binding.recyclerView.setHasFixedSize(true);
         binding.recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 3));

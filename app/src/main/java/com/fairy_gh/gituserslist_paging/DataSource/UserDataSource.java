@@ -6,7 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.paging.PageKeyedDataSource;
 import com.fairy_gh.gituserslist_paging.Api.ApiInterface;
 import com.fairy_gh.gituserslist_paging.Api.RetrofitClient;
-import com.fairy_gh.gituserslist_paging.Model.User;
+import com.fairy_gh.gituserslist_paging.model.User;
 import java.util.List;
 import io.reactivex.Observable;
 import retrofit2.Call;

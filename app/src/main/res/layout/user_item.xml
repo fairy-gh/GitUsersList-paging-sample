@@ -7,7 +7,7 @@
     <data>
         <variable
             name="user"
-            type="com.fairy_gh.gituserslist_paging.Model.User" />
+            type="com.fairy_gh.gituserslist_paging.model.User" />
     </data>
 
 

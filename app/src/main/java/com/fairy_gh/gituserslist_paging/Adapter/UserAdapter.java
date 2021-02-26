@@ -11,7 +11,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.paging.PagedListAdapter;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
-import com.fairy_gh.gituserslist_paging.Model.User;
+import com.fairy_gh.gituserslist_paging.model.User;
 import com.fairy_gh.gituserslist_paging.R;
 import com.fairy_gh.gituserslist_paging.databinding.UserItemBinding;
 import java.util.List;

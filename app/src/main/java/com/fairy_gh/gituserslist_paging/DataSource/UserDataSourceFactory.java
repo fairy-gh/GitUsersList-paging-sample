@@ -3,7 +3,7 @@ package com.fairy_gh.gituserslist_paging.DataSource;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.MutableLiveData;
 import androidx.paging.DataSource;
-import com.fairy_gh.gituserslist_paging.Model.User;
+import com.fairy_gh.gituserslist_paging.model.User;
 
 public class UserDataSourceFactory extends DataSource.Factory<Integer, User> {
 

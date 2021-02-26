@@ -1,9 +1,5 @@
 package com.fairy_gh.gituserslist_paging.Api;
 
-import com.fairy_gh.gituserslist_paging.Model.User;
-import java.util.List;
-import hu.akarnokd.rxjava3.retrofit.RxJava3CallAdapterFactory;
-import io.reactivex.Observable;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 

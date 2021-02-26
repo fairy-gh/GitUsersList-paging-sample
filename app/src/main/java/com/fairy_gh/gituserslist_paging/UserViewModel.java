@@ -4,10 +4,9 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModel;
 import androidx.paging.LivePagedListBuilder;
 import androidx.paging.PagedList;
-
 import com.fairy_gh.gituserslist_paging.DataSource.UserDataSource;
 import com.fairy_gh.gituserslist_paging.DataSource.UserDataSourceFactory;
-import com.fairy_gh.gituserslist_paging.Model.User;
+import com.fairy_gh.gituserslist_paging.model.User;
 
 public class UserViewModel extends ViewModel {
 
