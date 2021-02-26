@@ -18,7 +18,7 @@ public class UserDataSource extends PageKeyedDataSource<Integer, User> {
     private static String TAG  = UserDataSource.class.getSimpleName();
     public static Integer userId;
     public static Integer firstId = 0;
-    public static Integer per_page = 20;
+    public static Integer per_page = 21;
 
     @Override
     public void loadInitial(@NonNull LoadInitialParams<Integer> params, @NonNull LoadInitialCallback<Integer, User> callback) {
