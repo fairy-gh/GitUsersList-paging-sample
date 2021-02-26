@@ -61,6 +61,6 @@ public class HomeFragment extends Fragment {
                 adapter.submitList(users);
             }
         });
-
+        binding.recyclerView.setAdapter(adapter);
     }
 }
