@@ -28,7 +28,7 @@
             app:civ_border_color="#FF000000"
             android:scaleType="centerCrop"
             android:layout_centerHorizontal="true"
-            CircleImageView:image="@{user.avatar_url}"/>
+            imageUrl="@{user.avatar_url}"/>
 
         <TextView
             android:layout_width="match_parent"

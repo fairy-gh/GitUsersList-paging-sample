@@ -26,7 +26,7 @@ public class User {
         this.avatar_url = avatar_url;
     }
 
-    @BindingAdapter({"CircleImageView:image"})
+    @BindingAdapter({"imageUrl"})
     public static void avatarBinding(CircleImageView circleImageView, String avatar){
         Picasso.get().load(avatar).into(circleImageView);
     }
