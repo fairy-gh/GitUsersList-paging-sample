@@ -1,6 +1,7 @@
 package com.fairy_gh.gituserslist_paging;
 
 import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 import androidx.paging.LivePagedListBuilder;
 import androidx.paging.PagedList;
@@ -10,6 +11,7 @@ import com.fairy_gh.gituserslist_paging.model.User;
 
 public class UserViewModel extends ViewModel {
 
+    //@SuppressWarnings("unchecked")
     public static LiveData<PagedList<User>> userPagedList;
 
     public UserViewModel(){
@@ -19,7 +21,8 @@ public class UserViewModel extends ViewModel {
                 .setEnablePlaceholders(true)
                 .build();
 
-        userPagedList = new LivePagedListBuilder(dataSourceFactory, config).build();
+        //userPagedList = new LivePagedListBuilder(dataSourceFactory, config).build();
+        userPagedList = new LivePagedListBuilder<Integer, User>(dataSourceFactory, config).build();
     }
 
     @Override
