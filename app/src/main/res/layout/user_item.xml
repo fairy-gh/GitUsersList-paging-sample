@@ -17,7 +17,7 @@
         android:background="@color/white"
         android:gravity="center"
         android:padding="4dp"
-        android:layout_margin="4dp">
+        android:layout_margin="2dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/avatar"
@@ -25,7 +25,7 @@
             android:layout_height="98dp"
             android:src="@drawable/ic_launcher_background"
             app:civ_border_width="2dp"
-            app:civ_border_color="#FF000000"
+            app:civ_border_color="@color/dark"
             android:scaleType="centerCrop"
             android:layout_centerHorizontal="true"
             imageUrl="@{user.avatar_url}"/>
@@ -36,7 +36,7 @@
             android:layout_below="@+id/avatar"
             android:layout_marginTop="15dp"
             android:text="@{user.login, default=fairy_gh}"
-            android:textColor="#FF000000"
+            android:textColor="@color/dark"
             android:textSize="14sp"
             android:textStyle="bold"
             android:gravity="center"
