@@ -16,10 +16,8 @@ import retrofit2.Response;
 public class UserDataSource extends PageKeyedDataSource<Integer, User> {
 
     private static String TAG  = UserDataSource.class.getSimpleName();
-    public static Integer userId;
     public static Integer firstId = 0;
-    public static Integer per_page = 15;
-    int page = 1;
+    public static Integer per_page = 20;
 
     @Override
     public void loadInitial(@NonNull LoadInitialParams<Integer> params, @NonNull LoadInitialCallback<Integer, User> callback) {
@@ -30,8 +28,8 @@ public class UserDataSource extends PageKeyedDataSource<Integer, User> {
 
                if(response.code() == 200 && response.body() != null){
                    List<User> data = response.body();
-                   Log.e(TAG, ": Initial====>" + data.size());
-                   callback.onResult(data,null, page +1);
+                   Log.e(TAG, ": Initial====>" + data.size() + params.toString());
+                   callback.onResult(data,null, firstId + per_page);
                }
            }
 
@@ -51,8 +49,8 @@ public class UserDataSource extends PageKeyedDataSource<Integer, User> {
 
                 if(response.body() != null){
                     List<User> data = response.body();
-                    Log.e(TAG, ": Before====>" + data.size());
-                    int key = (params.key > (page)) ? params.key - 1 : null;
+                    Log.e(TAG, ": Before====>" + data.size() + params.key.toString());
+                    int key = (params.key > (firstId + per_page)) ? params.key - per_page : null;
                     callback.onResult(data, key);
                 }
             }
@@ -72,8 +70,8 @@ public class UserDataSource extends PageKeyedDataSource<Integer, User> {
             public void onResponse(Call<List<User>> call, Response<List<User>> response) {
                 if(response.body() != null){
                     List<User> data = response.body();
-                    Log.e(TAG, ": After====>" + data.size());
-                    int key = (params.key < 300) ? params.key + 1: null;
+                    Log.e(TAG, ": After====>" + data.size() + params.key.toString());
+                    int key = (params.key < 300) ? params.key + per_page: null;
                     callback.onResult(data, key);
                 }
             }

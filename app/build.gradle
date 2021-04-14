@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.fairy_gh.gituserslist_paging"
-        minSdkVersion 27
+        minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -42,14 +42,14 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    def nav_version = "2.3.3"
+    def nav_version = "2.3.4"
 
     implementation "androidx.navigation:navigation-fragment:$nav_version"
     implementation "androidx.navigation:navigation-ui:$nav_version"
     implementation "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"
     // Testing Navigation
     //androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
-    implementation "androidx.navigation:navigation-compose:1.0.0-alpha07"
+    implementation "androidx.navigation:navigation-compose:1.0.0-alpha09"
 
     def paging_version = "2.1.2"
 
